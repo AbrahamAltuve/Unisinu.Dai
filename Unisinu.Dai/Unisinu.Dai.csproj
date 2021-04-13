@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiagramaPersona.cs" />
     <Compile Include="ModelPersona.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,6 +91,7 @@
       <DependentUpon>ModelPersona.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="PersonaDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
