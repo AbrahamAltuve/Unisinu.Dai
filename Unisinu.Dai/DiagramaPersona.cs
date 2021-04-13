@@ -7,11 +7,11 @@ namespace Unisinu.Dai
 {
     public class DiagramaPersona
     {
-        private int id;
-        private string nombre;
-        private string apellido;
-        private string documento;
-        private string email;
-        private string telefono;
+        public int id;
+        public string nombre;
+        public string apellido;
+        public string documento;
+        public string email;
+        public string telefono;
     }
 }
