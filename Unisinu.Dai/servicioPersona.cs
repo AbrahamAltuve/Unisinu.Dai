@@ -14,7 +14,7 @@ namespace Unisinu.Dai
             List<DiagramaPersona> listPersonas = new List<DiagramaPersona>();
             DiagramaPersona obpersona = null;
 
-            using (personaEntities db = new personaEntities())
+            using (personasEntities db = new personasEntities())
             {
                 var personas = (from a in db.persona select a);
 
@@ -41,7 +41,7 @@ namespace Unisinu.Dai
             Console.WriteLine("Consultar por email");
 
             DiagramaPersona obpersona = null;
-            using (personaEntities db = new personaEntities())
+            using (personasEntities db = new personasEntities())
             {
                 var personas = (from a in db.persona where a.email == email select a);
                 foreach (persona person in personas)
@@ -65,7 +65,7 @@ namespace Unisinu.Dai
         {
             Console.WriteLine("Consultar por documento");
             DiagramaPersona obpersona = null;
-            using (personaEntities db = new personaEntities())
+            using (personasEntities db = new personasEntities())
             {
                 var personas = (from a in db.persona where a.documento == documento select a);
                 foreach (persona person in personas)
@@ -90,7 +90,7 @@ namespace Unisinu.Dai
             Console.WriteLine("Listar personas con el mismo apellido");
             List<DiagramaPersona> personasApellido = new List<DiagramaPersona>();
             DiagramaPersona obpersona = null;
-            using (personaEntities db = new personaEntities())
+            using (personasEntities db = new personasEntities())
             {
                 var personas =  (from a in db.persona where a.apellido == apellido select a);
                 foreach (persona person in personas)

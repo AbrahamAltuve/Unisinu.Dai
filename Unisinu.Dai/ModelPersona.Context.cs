@@ -13,10 +13,10 @@ namespace Unisinu.Dai
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class personaEntities : DbContext
+    public partial class personasEntities : DbContext
     {
-        public personaEntities()
-            : base("name=personaEntities")
+        public personasEntities()
+            : base("name=personasEntities")
         {
         }
     
