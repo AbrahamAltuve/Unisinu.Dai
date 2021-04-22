@@ -16,9 +16,11 @@ namespace Unisinu.Dai
 
             using (personasEntities db = new personasEntities())
             {
-                var personas = (from a in db.persona select a);
+                var persons = (from a in db.persona 
+                               orderby a.apellido, a.nombre, a.documento descending
+                               select a);
 
-                foreach(persona person in personas)
+                foreach(persona person in persons)
                 {
                     obpersona = new DiagramaPersona();
                     obpersona.id = person.id;
@@ -43,7 +45,8 @@ namespace Unisinu.Dai
             DiagramaPersona obpersona = null;
             using (personasEntities db = new personasEntities())
             {
-                var personas = (from a in db.persona where a.email == email select a);
+                var personas = (from a in db.persona select a).Sum(b => b.documento); 
+                                                         
                 foreach (persona person in personas)
                 {
                     obpersona = new DiagramaPersona();
@@ -93,6 +96,7 @@ namespace Unisinu.Dai
             using (personasEntities db = new personasEntities())
             {
                 var personas =  (from a in db.persona where a.apellido == apellido select a);
+
                 foreach (persona person in personas)
                 {
                     obpersona = new DiagramaPersona();
